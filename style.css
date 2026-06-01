@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    background:#ececec;
+}
+
+.app{
+    display:flex;
+    height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:260px;
+    background:white;
+    border-right:1px solid #ddd;
+    padding:25px;
+}
+
+.sidebar h2{
+    color:#666;
+    margin-bottom:30px;
+}
+
+.menu{
+    list-style:none;
+}
+
+.menu li{
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.menu li:hover{
+    background:#f0f0f0;
+}
+
+.active{
+    background:#f3f3f3;
+    color:#6c3cf0;
+    font-weight:bold;
+}
+
+/* MAIN */
+
+.main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+.header{
+    padding:40px;
+    background:linear-gradient(
+    135deg,
+    #8e44ad,
+    #5f27cd
+    );
+    color:white;
+}
+
+.header h1{
+    font-size:60px;
+    font-weight:300;
+}
+
+.header p{
+    font-size:22px;
+    margin-top:8px;
+}
+
+/* INPUT */
+
+.add-task{
+    display:flex;
+    padding:20px;
+    background:white;
+}
+
+.add-task input{
+    flex:1;
+    padding:15px;
+    border:none;
+    background:#f4f4f4;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.add-task button{
+    width:60px;
+    margin-left:10px;
+    border:none;
+    border-radius:10px;
+    background:#6c3cf0;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* TASKS */
+
+#taskList{
+    list-style:none;
+    padding:20px;
+    overflow-y:auto;
+}
+
+.task{
+    background:white;
+    margin-bottom:15px;
+    padding:18px;
+    border-radius:12px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.task span{
+    font-size:18px;
+}
+
+.completed{
+    text-decoration:line-through;
+    opacity:.5;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+}
+
+.buttons button{
+    border:none;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.done{
+    background:#4CAF50;
+    color:white;
+}
+
+.delete{
+    background:#ff4d4d;
+    color:white;
+}
